@@ -1,0 +1,6 @@
+# Use the Ollama image from Docker Hub
+FROM ollama/ollama AS base
+
+FROM base AS dev
+EXPOSE 11434
+CMD ["ollama", "run", "wizardlm2"]
